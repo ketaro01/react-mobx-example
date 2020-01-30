@@ -1,11 +1,17 @@
 import React from 'react';
-import Layout from '../components/ui/Layout';
+import styled from 'styled-components';
 
+const HomeWrap = styled.div`
+  width: 100%;
+  height: 800px;
+`;
 const HomePage = (props) => {
   return (
-    <div>
-      Home, {props.common_data}
-    </div>
+    <HomeWrap>
+      <div>
+        shopping home
+      </div>
+    </HomeWrap>
   );
 };
 
