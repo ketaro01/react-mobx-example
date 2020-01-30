@@ -17,6 +17,7 @@ class ProductStore {
   @action setCategoryList = (categoryList) => { this.categoryList = categoryList };
   @action setProductList = (productList) => { this.productList = productList };
   @action setCheckList = (checkList) => { this.checkList = checkList };
+  @action setLastError = (error) => { this.root.lastError = error };
 
   @action getCategoryList = async () => {
     try {
@@ -24,10 +25,10 @@ class ProductStore {
       if (response.status === 200) {
         this.setCategoryList(response.data.category_list);
       } else {
-        this.lastError = new Error(response.status);
+        this.setLastError(new Error(response.status));
       }
     } catch (error) {
-      this.lastError = error;
+      this.setLastError(error);
     }
   }
 }

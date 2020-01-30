@@ -1,41 +1,68 @@
-import React, { Children, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { inject, observer } from 'mobx-react';
 import styled from 'styled-components';
-import BackendApi from '../../service/BackendApi';
+import ShoppingInfo from '../common/ShoppingInfo';
+import { STORE_PRODUCT } from '../../lib/type/stores';
 
 const LayoutBox = styled.div`
-  width: 1280px;
+  max-width: 1280px;
   height: 100%;
   margin: 0 auto;
+  header > div {
+    ul {
+      overflow: hidden;
+      background-color: #333;
+      display: flex;
+      > li {
+        flex: 1;
+        float: left;
+        transition: background 0.3s;
+        > a {
+          display: block;
+          color: #fff;
+          text-align: center;
+          padding: 15px;
+        }
+        &:hover {
+          background-color: #111111;
+        }
+      }
+    }
+  }
 `;
 
-const Layout = ({ children }) => {
+const Layout = inject(STORE_PRODUCT)(observer((props) => {
+  const { children } = props;
+  const { categoryList, getCategoryList, lastError } = props[STORE_PRODUCT];
+
   useEffect(() => {
-    BackendApi.getCategoryList().then((response) => {
-      if (response.status === 200) {
-        console.log(response.data);
-      }
-    });
-  }, []);
-  const childrenWithProps = Children.map(children,
-    child => React.cloneElement(child, { common_data: 'test-value' }));
+    getCategoryList();
+  }, [getCategoryList]);
+
+  useEffect(() => {
+    if (lastError) {
+      alert(lastError.message);
+    }
+  }, [lastError]);
   return (
     <LayoutBox>
       <header>
-        헤더
         <div>
           <ul>
-            <li>apple</li>
-            <li>samsung</li>
-            <li>lg</li>
+            {categoryList.map((item) => <li key={item.name}>
+              <Link to={`/product/${item.value}`}>{item.name}</Link>
+            </li>)}
           </ul>
         </div>
       </header>
-      {childrenWithProps}
+      {children}
       <footer>
         푸터
       </footer>
+      <ShoppingInfo />
     </LayoutBox>
   );
-};
+}));
 
 export default Layout;
