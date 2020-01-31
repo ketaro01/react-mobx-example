@@ -62,6 +62,9 @@ const Layout = inject(STORE_PRODUCT)(observer((props) => {
       <header>
         <div>
           <ul>
+            <li>
+              <Link to={`/`}>HOME</Link>
+            </li>
             {categoryList.map((item) => <li key={item.name}>
               <Link to={`/product/${item.value}`}>{item.name}</Link>
             </li>)}
