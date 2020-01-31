@@ -30,6 +30,18 @@ const LayoutBox = styled.div`
       }
     }
   }
+  footer {
+    width: 100%;
+    height: 141px;
+    background-color: #525252;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > div {
+      font-size: 14px;
+    }
+  }
 `;
 
 const Layout = inject(STORE_PRODUCT)(observer((props) => {
@@ -58,7 +70,7 @@ const Layout = inject(STORE_PRODUCT)(observer((props) => {
       </header>
       {children}
       <footer>
-        푸터
+        <div>Copyright 2020. daehun yoon All rights reserved.</div>
       </footer>
       <ShoppingInfo />
     </LayoutBox>
