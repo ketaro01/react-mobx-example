@@ -86,18 +86,6 @@ const ProductWrap = styled.div`
               width: 1.5625vw;
               height: 1.5625vw;
               margin: 0vw 0.06944vw;
-              .star {
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-image: url("/img/ico-star-full.svg");
-              }
-              .star.empty {
-                background-image: url("/img/ico-star-empty.svg");
-              }
             }
           }
           .item-description {
@@ -122,6 +110,37 @@ const ProductWrap = styled.div`
         margin: 5px 5px 5px 5px;
       }
     }
+  }
+`;
+const StarBox = styled.span`
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: ${props => typeof props.percent !== 'undefined' ? props.percent : 100}%;
+  height: 100%;
+  overflow: hidden;
+  &.full:after {
+    position: absolute;
+    display: block;
+    width: 1.5625vw;
+    height: 100%;
+    background-image: url("/img/ico-star-full.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    content: ' ';
+  }
+  &.empty:after {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/ico-star-empty.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    content: ' ';
   }
 `;
 const ProductPage = (props) => {
@@ -159,19 +178,24 @@ const ProductPage = (props) => {
                 <h5 className="item-title">상품명</h5>
                 <div className="item-star">
                   <div>
-                    <span className="star"/>
+                    <StarBox className="empty" />
+                    <StarBox className="full" percent={100} />
                   </div>
                   <div>
-                    <span className="star"/>
+                    <StarBox className="empty" />
+                    <StarBox className="full" percent={100} />
                   </div>
                   <div>
-                    <span className="star"/>
+                    <StarBox className="empty" />
+                    <StarBox className="full" percent={100} />
                   </div>
                   <div>
-                    <span className="star empty"/>
+                    <StarBox className="empty" />
+                    <StarBox className="full" percent={50} />
                   </div>
                   <div>
-                    <span className="star empty"/>
+                    <StarBox className="empty" />
+                    <StarBox className="full" percent={0} />
                   </div>
                 </div>
                 <div className="item-price">

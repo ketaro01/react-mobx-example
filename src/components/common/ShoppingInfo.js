@@ -13,8 +13,9 @@ const ShoppingWrap = styled.div`
   justify-content: center;
   align-items: center;
   > div {
-    margin: 10px;
+    margin: 5px;
     > button {
+      padding: 5px;
       font-size: 16px;
       border-radius: 20px;
       transition: 0.2s background-color;
