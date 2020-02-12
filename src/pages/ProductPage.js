@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { DefaultButton } from '../components/ui/Button';
+import { STORE_PRODUCT } from '../lib/type/stores';
+import { inject, observer } from 'mobx-react';
 
 const ProductWrap = styled.div`
   .product-front-ad {
@@ -10,7 +12,7 @@ const ProductWrap = styled.div`
     .main-ad-info {
       width: 100%;
       height: 100%;
-      background-image: url('https://source.unsplash.com/random/1600x900/?travel');
+      background-image: url(${props => props.adImg});
       background-repeat: no-repeat;
       .info-text {
         position: absolute;
@@ -71,6 +73,10 @@ const ProductWrap = styled.div`
             margin: 0px 2.5px;
           }
         }
+        .item-tag:after {
+          content: '-';
+          opacity: 0;
+        }
         .item-info {
           text-align: center;
           .item-title {
@@ -93,6 +99,7 @@ const ProductWrap = styled.div`
             border-bottom: 1px solid #aaa;
             margin: 10px auto;
             width: 90%;
+            height: 80px;
             text-align: left;
             ul {
               list-style-type: initial;
@@ -143,16 +150,20 @@ const StarBox = styled.span`
     content: ' ';
   }
 `;
-const ProductPage = (props) => {
-  // const { params: { categoryNo } } = props.match;
+const ProductPage = inject(STORE_PRODUCT)(observer((props) => {
+  const { params: { categoryNo }, history } = props.match;
+  const { getProductList, productList, adInfo } = props[STORE_PRODUCT];
+  useEffect(() => {
+    getProductList(categoryNo);
+  }, [categoryNo, getProductList]);
   return (
-    <ProductWrap>
+    <ProductWrap adImg={adInfo.img}>
       <div className="product-front-ad">
         <div className="main-ad-info">
           <div className="info-text">
-            <h1>메인 광고 상품 타이틀</h1>
-            <h3>서브 타이틀</h3>
-            <DefaultButton>구입하러가기</DefaultButton>
+            <h1>{adInfo.title}</h1>
+            <h3>{adInfo.sub_title}</h3>
+            <DefaultButton onClick={() => history.push(adInfo.link)}>구입하러가기</DefaultButton>
           </div>
         </div>
       </div>
@@ -161,57 +172,46 @@ const ProductPage = (props) => {
           <h3>상품을 선택하세요!</h3>
         </div>
         <div className="product-list">
-          {new Array(9).fill('').map(() => (
-            <div className="product-item">
-              <div className="item-header">
-                <h5>신상품</h5>
-              </div>
-              <div className="item-img">
-                <img src="https://i.ibb.co/jfrfBNL/apple-1.jpg" alt="smartphone"/>
-              </div>
-              <div className="item-tag">
-                <span>256 GB</span>
-                <span>512 GB</span>
-                <span>자급제</span>
-              </div>
-              <div className="item-info">
-                <h5 className="item-title">상품명</h5>
-                <div className="item-star">
-                  <div>
-                    <StarBox className="empty" />
-                    <StarBox className="full" percent={100} />
-                  </div>
-                  <div>
-                    <StarBox className="empty" />
-                    <StarBox className="full" percent={100} />
-                  </div>
-                  <div>
-                    <StarBox className="empty" />
-                    <StarBox className="full" percent={100} />
-                  </div>
-                  <div>
-                    <StarBox className="empty" />
-                    <StarBox className="full" percent={50} />
-                  </div>
-                  <div>
-                    <StarBox className="empty" />
-                    <StarBox className="full" percent={0} />
-                  </div>
+          {productList.map((item) => {
+            const { score } = item;
+            const star_rating = new Array(5).fill('').map((_, index) => {
+              const tmp = score - index;
+              if (tmp >= 1) return 100;
+              return tmp * 100;
+            });
+
+            return (
+              <div className="product-item" key={`product_${item.product_no}`}>
+                <div className="item-header">
+                  <h5>{item.header}</h5>
                 </div>
-                <div className="item-price">
-                  가격
+                <div className="item-img">
+                  <img src={item.product_img} alt={item.name}/>
                 </div>
-                <div className="item-description">
-                  <ul>
-                    <li>특별한 나를 만드는 폴더블 디자인</li>
-                    <li>끊김없이 이어지는 혁신적인 사용성</li>
-                    <li>전문가 수준의 촬영이 가능한 여섯 개의 카메라</li>
-                  </ul>
+                <div className="item-tag">
+                  {item.services && item.services.map((tag, tag_index) => <span key={`tag_${item.product_no}_${tag_index}`}>{tag}</span>)}
                 </div>
-                <DefaultButton>구입하러가기</DefaultButton>
+                <div className="item-info">
+                  <h5 className="item-title">{item.name}</h5>
+                  <div className="item-star">
+                    {star_rating.map((percent, star_index) => <div key={`star_${item.product_no}_${star_index}`}>
+                      <StarBox className="empty" />
+                      <StarBox className="full" percent={percent} />
+                    </div>)}
+                  </div>
+                  <div className="item-price">
+                    가격
+                  </div>
+                  <div className="item-description">
+                    <ul>
+                      {item.description && item.description.map((description, description_index) => <li key={`tag_${item.product_no}_${description_index}`}>{description}</li>)}
+                    </ul>
+                  </div>
+                  <DefaultButton>구입하러가기</DefaultButton>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
           <div className="filler" />
           <div className="filler" />
           <div className="filler" />
@@ -219,6 +219,6 @@ const ProductPage = (props) => {
       </div>
     </ProductWrap>
   );
-};
+}));
 
 export default ProductPage;

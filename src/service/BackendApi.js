@@ -1,10 +1,5 @@
-// import axios from 'axios';
-// const http = (options) => axios.create({
-//   headers: {
-//     'cache-control': 'no-cache, no-store',
-//     Pragma: 'no-cache',
-//   },
-// });
+import productData from '../lib/productData';
+
 const delay = (ms = 50) => new Promise((resolve) => {
   setTimeout(() => {
     resolve();
@@ -38,6 +33,12 @@ const BackendApi = {
       { img_url: 'https://source.unsplash.com/random/800x600/?night', link_url: '/product/3', description: 'blah blah' },
     ];
     resolve(setResponseData({ ad_data }));
+  }),
+  getProductList: (category_no) =>  new Promise(async (resolve) => {
+    await delay();
+    const product_list = productData.product_data.filter(value => value.category_no === parseInt(category_no, 10));
+    const ad_info = productData.ad_data.find(value => value.category_no === parseInt(category_no, 10));
+    resolve(setResponseData({ product_list, ad_info: ad_info || {} }));
   }),
 };
 

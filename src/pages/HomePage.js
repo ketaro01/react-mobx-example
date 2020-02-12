@@ -57,7 +57,7 @@ const HomePage = inject(STORE_AD)(observer((props) => {
   return (
     <HomeWrap>
       <div className="ad-wrap">
-        {adData.map((item) => <div className="ad-item">
+        {adData.map((item, index) => <div className="ad-item" key={index}>
           <div className="ad-title">{item.description}</div>
           <Link to={item.link_url}>
             <img className="ad-thumbnail" src={item.img_url} alt={item.description} />

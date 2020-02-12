@@ -1,0 +1,507 @@
+{
+  "ad_data": [
+    {
+      "category_no": 1,
+      "ad_no": 1,
+      "img": "https://source.unsplash.com/random/1600x900/?travel",
+      "title": "Apple",
+      "sub_title": "iPhone 11",
+      "link": "/product/1"
+    },
+    {
+      "category_no": 2,
+      "ad_no": 2,
+      "img": "https://source.unsplash.com/random/1600x900/?nature",
+      "title": "Samsung",
+      "sub_title": "Galaxy S20",
+      "link": "/product/2"
+    },
+    {
+      "category_no": 3,
+      "ad_no": 3,
+      "img": "https://source.unsplash.com/random/1600x900/?fruit",
+      "title": "LG",
+      "sub_title": "V50",
+      "link": "/product/3"
+    }
+  ],
+  "product_data": [
+    {
+      "category_no": 1,
+      "product_no": 1,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/jfrfBNL/apple-1.jpg",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "아이폰",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 1,
+      "product_no": 2,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/Tvc4NcM/apple-2.jpg",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "아이패드",
+      "score": 1.8,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 1,
+      "product_no": 3,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/M1BJJ0K/apple-3.jpg",
+      "services": [],
+      "name": "에어팟",
+      "score": 4.87,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 1,
+      "product_no": 4,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/jfrfBNL/apple-1.jpg",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "아이폰",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 1,
+      "product_no": 5,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/Tvc4NcM/apple-2.jpg",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "아이패드",
+      "score": 3,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 1,
+      "product_no": 6,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/M1BJJ0K/apple-3.jpg",
+      "services": [],
+      "name": "에어팟",
+      "score": 5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 1,
+      "product_no": 7,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/jfrfBNL/apple-1.jpg",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "아이폰",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 1,
+      "product_no": 8,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/Tvc4NcM/apple-2.jpg",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "아이패드",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 1,
+      "product_no": 9,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/M1BJJ0K/apple-3.jpg",
+      "services": [],
+      "name": "에어팟",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 2,
+      "product_no": 10,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/Pmp0DYv/samsung-1.png",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "갤럭시 폴드",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 2,
+      "product_no": 11,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/ctcYmLQ/samsung-2.png",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "갤럭시 노트",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 2,
+      "product_no": 12,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/ncg8Zzv/samsung-3.png",
+      "services": [],
+      "name": "갤럭시 S10",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 2,
+      "product_no": 13,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/Pmp0DYv/samsung-1.png",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "갤럭시 폴드",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 2,
+      "product_no": 14,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/ctcYmLQ/samsung-2.png",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "갤럭시 노트",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 2,
+      "product_no": 15,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/ncg8Zzv/samsung-3.png",
+      "services": [],
+      "name": "갤럭시 S10",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 2,
+      "product_no": 16,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/Pmp0DYv/samsung-1.png",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "갤럭시 폴드",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 2,
+      "product_no": 17,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/ctcYmLQ/samsung-2.png",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "갤럭시 노트",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 2,
+      "product_no": 18,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/ncg8Zzv/samsung-3.png",
+      "services": [],
+      "name": "갤럭시 S10",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 3,
+      "product_no": 19,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/H4PbLk8/lg-1.jpg",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "G7",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 3,
+      "product_no": 20,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/grb9BrH/lg-2.jpg",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "V50",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 3,
+      "product_no": 21,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/hd7sJw1/lg-3.jpg",
+      "services": [],
+      "name": "G8",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 3,
+      "product_no": 22,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/H4PbLk8/lg-1.jpg",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "G7",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 3,
+      "product_no": 23,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/grb9BrH/lg-2.jpg",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "V50",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 3,
+      "product_no": 24,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/hd7sJw1/lg-3.jpg",
+      "services": [],
+      "name": "G8",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 3,
+      "product_no": 25,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/H4PbLk8/lg-1.jpg",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "G7",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 3,
+      "product_no": 26,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/grb9BrH/lg-2.jpg",
+      "services": [
+        "256 GB",
+        "512 GB",
+        "자급제"
+      ],
+      "name": "V50",
+      "score": 4.5,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    },
+    {
+      "category_no": 3,
+      "product_no": 27,
+      "header": "신상품",
+      "product_img": "https://i.ibb.co/hd7sJw1/lg-3.jpg",
+      "services": [],
+      "name": "G8",
+      "score": 2.22,
+      "price": 120,
+      "description": [
+        "특별한 나를 만드는 폴더블 디자인",
+        "끊임없이 이어지는 혁신적인 사용성",
+        "전문가 수준의 촬영이 가능한 여섯 개의 카메라"
+      ]
+    }
+  ]
+}
