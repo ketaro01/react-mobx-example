@@ -11,6 +11,7 @@ const Root = () => {
       <Router>
         <Switch>
           <RouteWrapper exact path="/" component={HomePage} layout={Layout}/>
+          <RouteWrapper path="/home" component={HomePage} layout={Layout}/>
           <RouteWrapper exact path="/product/:categoryNo?" component={ProductPage} layout={Layout}/>
         </Switch>
       </Router>

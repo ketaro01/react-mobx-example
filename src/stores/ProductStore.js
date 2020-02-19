@@ -12,14 +12,37 @@ class ProductStore {
   @observable productList = []; // 상품 정보
   @observable checkList = []; // 사용자가 본적이 있는 product list
   @observable adInfo = {}; // 상푸뫟면 광고 정보
+  @observable basketList = []; // 장바구니
   @computed get productCount() { return this.productList.length };
   @computed get checkCount() { return this.checkList.length };
+  @computed get basketCount() { return this.basketList.length };
 
   @action setCategoryList = (categoryList) => { this.categoryList = categoryList };
   @action setProductList = (productList) => { this.productList = productList };
   @action setAdInfo = (adInfo) => { this.adInfo = adInfo };
   @action setCheckList = (checkList) => { this.checkList = checkList };
   @action setLastError = (error) => { this.root.lastError = error };
+
+  // 장바구니 추가
+  @action addBasket = (item) => {
+    const exists = this.basketList.find(basketItem => basketItem.product_no === item.product_no);
+    if (!!exists) {
+      exists.duplicate = (exists.duplicate || 1) + 1;
+    } else {
+      this.basketList.push(item);
+    }
+  };
+
+  // 장바구니 제거
+  @action removeBasket = (product_no) => {
+    const exists = this.basketList.find(basketItem => basketItem.product_no === product_no);
+    this.basketList.remove(exists);
+  };
+
+  // 장바구니 초기화
+  @action resetBasket = () => {
+    this.basketList.clear();
+  };
 
   @action getCategoryList = async () => {
     try {
@@ -32,7 +55,7 @@ class ProductStore {
     } catch (error) {
       this.setLastError(error);
     }
-  }
+  };
 
   @action getProductList = async (category_id) => {
     try {
@@ -46,7 +69,7 @@ class ProductStore {
     } catch (error) {
       this.setLastError(error);
     }
-  }
+  };
 }
 
 export default ProductStore;
