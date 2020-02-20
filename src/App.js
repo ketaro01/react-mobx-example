@@ -1,6 +1,6 @@
 import React from 'react';
 import Root from './Root';
-import './App.css';
+import './global.css';
 
 function App() {
   return (

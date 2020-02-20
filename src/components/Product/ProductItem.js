@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StarBox } from './style/ProductStyle';
+import { ProductItemWrap, StarBox } from './style/ProductStyle';
 import { DefaultButton } from '../ui/Button';
 import { FaShoppingBasket } from 'react-icons/fa';
 
@@ -26,7 +26,7 @@ const ProductItem = (props) => {
     return tmp * 100;
   });
   return (
-    <div className="product-item">
+    <ProductItemWrap>
       <div className="item-header">
         <h5>{header}</h5>
       </div>
@@ -55,7 +55,7 @@ const ProductItem = (props) => {
         <DefaultButton className="item-button" onClick={() => onClickBuy(product_no)}>구입하러가기</DefaultButton>
         <DefaultButton className="item-button" onClick={() => onClickAddBasket(data)}><FaShoppingBasket color="#fff" /></DefaultButton>
       </div>
-    </div>
+    </ProductItemWrap>
   );
 };
 

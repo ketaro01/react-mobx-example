@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import { ProductWrap } from './style/ProductStyle';
 import ProductItem from './ProductItem';
@@ -10,6 +11,7 @@ const Product = (props) => {
     productList,
     adInfo,
   } = props;
+
   const history = useHistory();
 
   return (
@@ -38,4 +40,12 @@ const Product = (props) => {
   );
 };
 
+Product.propTypes = {
+  /** 장바구니에 데이터 추가를 위한 click 이벤트 */
+  onClickAddBasket: PropTypes.func,
+  /** 서버에서 가져온 상품 리스트 */
+  productList: PropTypes.array,
+  /** 서버에서 가져온 메인 광고 상품 정보 */
+  adInfo: PropTypes.shape({}),
+};
 export default Product;
