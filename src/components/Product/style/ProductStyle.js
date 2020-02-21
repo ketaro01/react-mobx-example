@@ -22,6 +22,7 @@ const ProductWrap = styled.div`
     }
   }
   .product-box {
+    width: 100%;
     .product-title {
       text-align: center;
     }
@@ -45,6 +46,7 @@ const ProductWrap = styled.div`
 const ProductItemWrap = styled.div`
   font-size: 12px;
   min-width: 300px;
+  max-width: 400px;
   height: 550px;
   box-sizing: border-box;
   margin: 5px 5px 5px 5px;

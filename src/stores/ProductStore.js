@@ -15,7 +15,14 @@ class ProductStore {
   @observable basketList = []; // 장바구니
   @computed get productCount() { return this.productList.length };
   @computed get checkCount() { return this.checkList.length };
-  @computed get basketCount() { return this.basketList.length };
+  @computed get basketCount() {
+    if (this.basketList.length === 0) return 0;
+    return this.basketList.map(v => v.duplicate || 1).reduce((a, b) => a + b);
+  };
+  @computed get checkedProduct() {
+    if (this.basketList.length === 0) return 0;
+    return this.basketList.filter(v => !!v.isCheck);
+  }
 
   @action setCategoryList = (categoryList) => { this.categoryList = categoryList };
   @action setProductList = (productList) => { this.productList = productList };
@@ -42,6 +49,11 @@ class ProductStore {
   // 장바구니 초기화
   @action resetBasket = () => {
     this.basketList.clear();
+  };
+
+  @action checkProduct = (item, isCheck) => {
+    const exists = this.basketList.find(basketItem => basketItem.product_no === item.product_no);
+    exists.isCheck = !isCheck;
   };
 
   @action getCategoryList = async () => {
